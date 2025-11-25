@@ -59,6 +59,7 @@ img {
   font-weight: 700;
   margin-bottom: 8px;
   color: #1F1B2E;
+  text-align: center;
 }
 
 .section-head .muted {
@@ -140,27 +141,23 @@ footer {
 }
 
 /* 2 por fila en tablets pequeñas */
-@media(max-width: 780px) {
+@media(max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 2 por fila en teléfonos (lo que pediste) */
-@media(max-width: 600px) {
+/* 2 columnas en teléfonos reales (lo que pediste) */
+@media(max-width: 768px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 }
 
-/* Corregir scroll en teléfonos muy pequeños */
-@media(max-width: 400px) {
+/* 1 por fila en teléfonos muy pequeños */
+@media(max-width: 420px) {
   .cards {
     grid-template-columns: 1fr;
   }
-}
-
-.section-head h2 {
-  text-align: center;
 }
