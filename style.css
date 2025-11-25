@@ -19,6 +19,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Texto centrado general */
 .section p,
 footer p,
 .section-head {
@@ -31,6 +32,7 @@ img {
   border-radius: 10px;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -92,6 +94,8 @@ a {
   overflow: hidden;
   transition: 0.28s ease;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -107,14 +111,17 @@ a {
   border-bottom: 5px solid #F3BFD1;
 }
 
+/* Título */
 .card h4 {
   margin-top: 20px;
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 700;
   color: #1F1B2E;
+  padding: 0 14px;
 }
 
+/* Descripción */
 .card p {
   margin-top: 10px;
   padding: 0 14px;
@@ -122,6 +129,7 @@ a {
   color: #656565;
 }
 
+/* Precio */
 .card .precio {
   font-weight: 700;
   color: #b22727;
@@ -186,12 +194,52 @@ footer {
   }
 }
 
+/* ---------------------------------------
+   MEJORAS ADICIONALES PARA TARJETAS MÓVIL
+   (evitar que queden demasiado largas)
+   -------------------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Aseguramos que las tarjetas mantengan una proporción agradable */
+  .card {
+    height: auto;                   /* evitar alturas fijas que alargan */
+    aspect-ratio: 3 / 4;            /* proporción estética */
+    padding: 14px 12px;
+    justify-content: space-between; /* empuja el contenido para repartir espacio */
+  }
+
+  /* Imágenes más compactas para no empujar el contenido */
+  .card-img {
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom: 4px solid #F3BFD1;
+  }
+
+  /* Ajustes tipográficos en móvil */
+  .card h4 {
+    font-size: 18px;
+    margin-top: 12px;
+    line-height: 1.15;
+  }
+
+  .card p {
+    font-size: 0.86rem;
+    line-height: 1.25;
+    margin-top: 8px;
+  }
+
+  .card .precio {
+    margin-top: 10px;
+    font-size: 0.98rem;
+  }
+}
+
 /* =======================================
    ELIMINADO EL BREAKPOINT DE 1 COLUMNA
 ======================================= */
-
 /* Se quitó el @media(max-width: 360px) que forzaba 1 columna */
-
 
 /* =======================================
    SEGURIDAD EXTRA: FORZAR 2 COLUMNAS EN MÓVILES
@@ -203,3 +251,4 @@ footer {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
