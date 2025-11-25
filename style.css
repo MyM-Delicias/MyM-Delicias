@@ -6,7 +6,7 @@
 }
 
 html, body {
-  overflow-x: hidden; /* Elimina scroll horizontal */
+  overflow-x: hidden;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Centrar solo texto suelto */
+/* Centrado */
 .section p,
 footer p,
 .section-head {
@@ -34,6 +34,7 @@ img {
   display: block;
 }
 
+/* Contenedor */
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -59,6 +60,7 @@ img {
   font-weight: 700;
   margin-bottom: 8px;
   color: #1F1B2E;
+  text-align: center;
 }
 
 .section-head .muted {
@@ -74,7 +76,7 @@ img {
   width: 100%;
 }
 
-/* Diseño de cada tarjeta */
+/* Tarjeta individual */
 .card {
   background: #fff;
   border-radius: 18px;
@@ -99,7 +101,7 @@ img {
   border-bottom: 4px solid #F6C7D8;
 }
 
-/* Títulos */
+/* Título */
 .card h4 {
   margin-top: 18px;
   font-family: 'Playfair Display', serif;
@@ -130,37 +132,39 @@ footer {
   color: #1F1B2E;
 }
 
-/* ================= RESPONSIVE ================= */
+/* =======================================
+   RESPONSIVE
+======================================= */
 
-/* 3 por fila en tablets grandes */
+/* 3 columnas en 1020px */
 @media(max-width: 1020px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* 2 por fila en tablets pequeñas */
-@media(max-width: 780px) {
+/* 2 columnas en tablets y teléfonos grandes */
+@media(max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 2 por fila en teléfonos (lo que pediste) */
-@media(max-width: 600px) {
+/* Ajustar padding para permitir 2 columnas en móviles */
+@media(max-width: 768px) {
+  .container {
+    padding: 14px;
+  }
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 }
 
-/* Corregir scroll en teléfonos muy pequeños */
-@media(max-width: 400px) {
+/* 1 columna en pantallas muy pequeñas */
+@media(max-width: 420px) {
   .cards {
     grid-template-columns: 1fr;
   }
-}
-
-.section-head h2 {
-  text-align: center;
 }
