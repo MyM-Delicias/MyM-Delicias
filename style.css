@@ -14,8 +14,8 @@ html, body {
 body {
   font-family: Montserrat, sans-serif;
   line-height: 1.65;
-  color: #1F1B2E;
-  background: linear-gradient(180deg, #FFF6ED 0%, #FFF9F0 100%);
+  color: #2B2B2B; /* texto principal más suave */
+  background: linear-gradient(180deg, #FFF4EC 0%, #FFF9F5 100%);
   scroll-behavior: smooth;
 }
 
@@ -52,7 +52,7 @@ a {
 }
 
 .section:nth-child(even) {
-  background: #FFF5EA;
+  background: #FFF1E8; /* fondo alterno más limpio */
 }
 
 .section-head {
@@ -64,11 +64,11 @@ a {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1F1B2E;
+  color: #2A1F1D; /* marrón gourmet */
 }
 
 .section-head .muted {
-  color: #8c8c8c;
+  color: #7A6F6B; /* gris cálido */
   font-size: 1.05rem;
 }
 
@@ -86,21 +86,21 @@ a {
    TARJETAS
 ======================================= */
 .card {
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 18px;
   padding: 0 0 26px 0;
-  box-shadow: 0 14px 32px rgba(30, 27, 45, 0.08);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
   text-align: center;
   overflow: hidden;
   transition: 0.28s ease;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04); /* borde más fino */
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 18px 45px rgba(30, 27, 45, 0.12);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
 }
 
 .card-img {
@@ -108,7 +108,7 @@ a {
   height: 190px;
   object-fit: cover;
   border-radius: 0;
-  border-bottom: 5px solid #F3BFD1;
+  border-bottom: 5px solid #FF8A65; /* coral moderno */
 }
 
 /* Título */
@@ -117,7 +117,7 @@ a {
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #1F1B2E;
+  color: #2A1F1D;
   padding: 0 14px;
 }
 
@@ -126,13 +126,13 @@ a {
   margin-top: 10px;
   padding: 0 14px;
   font-size: 0.98rem;
-  color: #656565;
+  color: #6F6F6F;
 }
 
 /* Precio */
 .card .precio {
   font-weight: 700;
-  color: #b22727;
+  color: #C0392B; /* rojo gourmet */
   margin-top: 8px;
   font-size: 1rem;
 }
@@ -142,8 +142,8 @@ a {
 ======================================= */
 footer {
   padding: 45px 0;
-  background: #FFF9F0;
-  color: #1F1B2E;
+  background: #FFF1E8;
+  color: #2A1F1D;
   font-size: 0.95rem;
 }
 
@@ -197,12 +197,11 @@ footer {
 /* =======================================
    AJUSTE CLAVE – SOLUCIÓN AL TEXTO CORTADO
 ======================================= */
-
 @media (max-width: 768px) {
 
   .card {
     height: auto;
-    aspect-ratio: auto;          /* ← SOLUCIÓN: elimina corte de texto */
+    aspect-ratio: auto;
     padding: 14px 12px;
     justify-content: space-between;
   }
@@ -211,7 +210,7 @@ footer {
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
-    border-bottom: 4px solid #F3BFD1;
+    border-bottom: 4px solid #FF8A65;
   }
 
   .card h4 {
