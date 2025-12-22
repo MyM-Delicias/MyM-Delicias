@@ -174,7 +174,7 @@ footer {
   }
 }
 
-/* 2 columnas en TODOS los móviles */
+/* 2 columnas en móviles */
 @media(max-width: 600px) {
   .container {
     padding: 18px;
@@ -194,22 +194,19 @@ footer {
   }
 }
 
-/* ---------------------------------------
-   MEJORAS ADICIONALES PARA TARJETAS MÓVIL
-   (evitar que queden demasiado largas)
-   -------------------------------------- */
+/* =======================================
+   AJUSTE CLAVE – SOLUCIÓN AL TEXTO CORTADO
+======================================= */
 
 @media (max-width: 768px) {
 
-  /* Aseguramos que las tarjetas mantengan una proporción agradable */
   .card {
-    height: auto;                   /* evitar alturas fijas que alargan */
-    aspect-ratio: 3 / 4;            /* proporción estética */
+    height: auto;
+    aspect-ratio: auto;          /* ← SOLUCIÓN: elimina corte de texto */
     padding: 14px 12px;
-    justify-content: space-between; /* empuja el contenido para repartir espacio */
+    justify-content: space-between;
   }
 
-  /* Imágenes más compactas para no empujar el contenido */
   .card-img {
     height: 120px;
     object-fit: cover;
@@ -217,7 +214,6 @@ footer {
     border-bottom: 4px solid #F3BFD1;
   }
 
-  /* Ajustes tipográficos en móvil */
   .card h4 {
     font-size: 18px;
     margin-top: 12px;
@@ -237,18 +233,11 @@ footer {
 }
 
 /* =======================================
-   ELIMINADO EL BREAKPOINT DE 1 COLUMNA
+   FORZAR 2 COLUMNAS EN MÓVILES
 ======================================= */
-/* Se quitó el @media(max-width: 360px) que forzaba 1 columna */
-
-/* =======================================
-   SEGURIDAD EXTRA: FORZAR 2 COLUMNAS EN MÓVILES
-======================================= */
-
 @media(max-width: 600px) {
   .cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-
