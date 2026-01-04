@@ -540,44 +540,47 @@
 
                 <div class="cards">
 
-    <!-- CARRUSEL -->
-    <div class="carousel">
-      <button class="carousel-btn prev">&#10094;</button>
+                    <!-- CARRUSEL -->
+                    <div class="carousel">
+                        <button class="carousel-btn prev">&#10094;</button>
 
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <img src="assets/evento1.jpeg" alt="Evento 1">
-        </div>
-        <div class="carousel-slide">
-          <img src="assets/evento2.jpeg" alt="Evento 2">
-        </div>
-        <div class="carousel-slide">
-          <img src="assets/evento4.jpeg" alt="Evento 3">
-        </div>
-      </div>
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="assets/evento1.jpeg" alt="Evento 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/evento2.jpeg" alt="Evento 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/evento4.jpeg" alt="Evento 3">
+                            </div>
+                        </div>
 
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
 
- <!-- Tarjeta SOLO TEXTO -->
-        <article class="card card-text">
-            <h4>Nuestros Servicios incluyen</h4>
-            <p>-Servicio de mesa.</p>
-            <p>-Coctelería y reposteria.</p>
-        </article>
+                </div>
+            </section>
 
-        <!-- Tarjeta SOLO TEXTO -->
-        <article class="card card-text">
-            <h4>¿Como Trabajamos?</h4>
-            <p>-Contáctanos y coordinamos para conocer tus gustos y preferencias.</p>
-             <p>-A los días te enviaremos una propuesta.</p>
-              <p>-Si todo esta Ok, agendamos una fecha.</p>
-        </article>
+            <section id="faq" class="section">
+                <div class="section-head">
+                    <h2>¿Como Trabajamos</h2>
+                </div>
+                <p><strong>-Contáctanos y coordinamos para conocer tus gustos y preferencias.</strong></p>
+                <p><strong>-A los días te enviaremos una propuesta.</strong></p>
+                <p><strong>-Si todo esta Ok, agendamos una fecha.</strong></p>
+                <div class="section-head">
+                    <h2>Nuestros servicios incluyen</h2>
+                </div>
+                 <p><strong>-Servicio de mesa.</strong></p>
+                <p><strong>-Coctelería y reposteria.</strong></p>
+                <p>Consulte por el presupuesto por mail</p>
+                <p><strong>maria.jose.toro.sandoval@gmail.com</strong></p>
+                 <p><strong>oscar.herrera@pucv.cl</strong></p>
 
-  </div>
-</section>
 
 
+            </section>
 
 
 
@@ -620,23 +623,23 @@
         </div>
     </footer>
     <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
 
-  let index = 0;
+        let index = 0;
 
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  });
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        });
 
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  });
-</script>
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        });
+    </script>
 
 
 </body>
