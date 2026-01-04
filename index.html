@@ -531,6 +531,51 @@
                     </article>
                 </div>
             </section>
+            <section id="eventos-especiales" class="section">
+                <div class="section-head">
+                    <h2>Eventos Especiales</h2>
+                    <div class="muted">Decoramos y armamos mesas para <strong>Eventos Corporativos</strong> y de<strong>
+                            Coffe Break.</strong></div>
+                </div>
+
+                <div class="cards">
+
+    <!-- CARRUSEL -->
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="assets/evento1.jpeg" alt="Evento 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/evento2.jpeg" alt="Evento 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/evento4.jpeg" alt="Evento 3">
+        </div>
+      </div>
+
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+ <!-- Tarjeta SOLO TEXTO -->
+        <article class="card card-text">
+            <h4>Nuestros Servicios incluyen</h4>
+            <p>-Servicio de mesa.</p>
+            <p>-Coctelería y reposteria.</p>
+        </article>
+
+        <!-- Tarjeta SOLO TEXTO -->
+        <article class="card card-text">
+            <h4>¿Como Trabajamos?</h4>
+            <p>-Contáctanos y coordinamos para conocer tus gustos y preferencias.</p>
+             <p>-A los días te enviaremos una propuesta.</p>
+              <p>-Si todo esta Ok, agendamos una fecha.</p>
+        </article>
+
+  </div>
+</section>
 
 
 
@@ -550,8 +595,8 @@
             <p><strong>¿El envio es gratis?</strong></p>
             <p>No, se retira en domicilio o se envía su pedido vía aplicación disponible, el cual el costo corre por
                 cuenta del cliente.</p>
-                 <p><strong>¿Con cuántos días de anticipación debo agendar los pedidos?</strong></p>
-                 <p>Minimo 2 días de anticipacion</p>
+            <p><strong>¿Con cuántos días de anticipación debo agendar los pedidos?</strong></p>
+            <p>Minimo 2 días de anticipacion</p>
 
         </section> <!-- =========================== CONTACTO ============================ -->
         <section id="contacto" class="section">
@@ -574,6 +619,25 @@
             <p class="muted">© M y M Delicias — Todos los derechos reservados</p>
         </div>
     </footer>
+    <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+
+  let index = 0;
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+</script>
+
 
 </body>
 
