@@ -355,3 +355,32 @@ footer {
 
 .carousel-btn.prev { left: 12px; }
 .carousel-btn.next { right: 12px; }
+/* --- SECCIÓN LOGO INICIAL --- */
+.hero-logo {
+  width: 100%;
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* puedes cambiar el color */
+}
+
+/* Logo */
+.logo-principal {
+  width: 300px;       /* tamaño en desktop */
+  max-width: 80%;     /* evita que se salga en móvil */
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-principal {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-principal {
+    width: 180px;
+  }
+}
