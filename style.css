@@ -358,7 +358,7 @@ footer {
 /* --- SECCIÓN LOGO INICIAL --- */
 .hero-logo {
   width: 100%;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: 30vh; /* ocupa toda la pantalla */
   display: flex;
   align-items: center;
   justify-content: center;
